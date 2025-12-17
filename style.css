@@ -1,0 +1,37 @@
+header{
+    background-color: rgb(247, 248, 248);
+    align-items: center;
+    display:flex;
+    justify-content: space-between;
+    color:black;
+    margin: 0px;
+    
+}
+#subnav{
+    justify-content: space-between;
+    background-color: rgb(48, 45, 45);
+    color: rgb(253, 253, 253);
+    display: flex;
+    padding: 8px;
+
+    letter-spacing: 1px;
+    margin-block: 0px;
+    width: 100%;
+    scrollbar-width: none;
+    margin:auto;  
+    position: fixed;
+    left: 0;
+    right: 0;
+    overflow: auto;
+    max-width: 1750px;
+            
+}
+body{
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    margin:0;
+    padding:0;
+}
+#subnav a{
+    color:rgb(253, 254, 255);
+}
