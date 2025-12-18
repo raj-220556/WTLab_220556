@@ -1,13 +1,59 @@
+
+body{
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    margin:0;
+    padding:0;
+}
+
 header{
-    background-color: rgb(247, 248, 248);
+    background-color: rgb(255, 255, 255);
     align-items: center;
     display:flex;
-    justify-content: space-between;
     color:black;
+    position: sticky;
+    top:0;
     margin: 0px;
+    padding: 0%;
+    padding-bottom: 0%;
+    padding-top: 0%;
     
 }
-#subnav{
+header a{
+    color: black;
+    font-size: 18px;
+    margin: 10px;
+    padding: 10px;
+    text-decoration: none;
+    
+}
+header a:hover{
+    background-color: rgba(206, 196, 196, 0.568);
+    border-radius: 20px;
+}
+
+#logintag{
+    padding-left: 18px;
+    padding-right: 18px;
+
+    color: white;
+    background-color: rgb(78, 160, 78);
+    border-radius: 10px;
+}
+#logintag:hover{
+    background-color: rgb(3, 102, 3);
+}
+#ss{
+    padding: 0px;
+    margin: 0;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 40px;
+    /* text-shadow: 5px 5px 10px yellow, 4px 8px 10px orange; */
+    /* background-color: aquamarine; */
+}
+
+/* #subnav{
     justify-content: space-between;
     background-color: rgb(48, 45, 45);
     color: rgb(253, 253, 253);
@@ -25,13 +71,36 @@ header{
     overflow: auto;
     max-width: 1750px;
             
-}
-body{
-    color: rgb(0, 0, 0);
-    background-color: rgb(255, 255, 255);
-    margin:0;
-    padding:0;
+} */
+#subnav{
+    background-color: rgb(65, 57, 57);
+    position: fixed;
+    margin-block: 0px;
+
+    overflow-x: auto;   /* Enable horizontal scroll */
+    white-space: nowrap;    /* Keep links in a single row */
+    scrollbar-width: none;
+    left: 0;
+    right: 0;
+
 }
 #subnav a{
+    
+    background-color: rgb(65, 57, 57);
     color:rgb(253, 254, 255);
+    padding: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0px;
+    display: inline-block;  /* Essential for padding/margin to work */
+
+    text-decoration: none;
+    
 }
+
+#subnav a:hover{
+    background-color: rgb(48, 45, 45);
+    color: rgb(37, 199, 253);
+}
+
+
