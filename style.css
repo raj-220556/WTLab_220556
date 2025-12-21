@@ -4,9 +4,31 @@ body{
     background-color: rgb(255, 255, 255);
     margin:0;
     padding:0;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 35px 1fr 20px;
 }
 
-header{
+#footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    bottom: 0;
+
+}
+#logintag{
+    padding-left: 18px;
+    padding-right: 18px;
+
+    color: white;
+    background-color: rgb(78, 160, 78);
+    border-radius: 10px;
+}
+#logintag:hover{
+    background-color: rgb(3, 102, 3);
+}
+#nav{
     background-color: rgb(255, 255, 255);
     align-items: center;
     display:flex;
@@ -19,7 +41,7 @@ header{
     padding-top: 0%;
     
 }
-header a{
+#nav a{
     color: black;
     font-size: 18px;
     margin: 10px;
@@ -27,22 +49,12 @@ header a{
     text-decoration: none;
     
 }
-header a:hover{
+#nav a:hover{
     background-color: rgba(206, 196, 196, 0.568);
     border-radius: 20px;
 }
 
-#logintag{
-    padding-left: 18px;
-    padding-right: 18px;
 
-    color: white;
-    background-color: rgb(78, 160, 78);
-    border-radius: 10px;
-}
-#logintag:hover{
-    background-color: rgb(3, 102, 3);
-}
 #ss{
     padding: 0px;
     margin: 0;
@@ -74,18 +86,20 @@ header a:hover{
 } */
 #subnav{
     background-color: rgb(65, 57, 57);
-    position: fixed;
+    position: sticky;
+    top: 50px;
     margin-block: 0px;
 
     overflow-x: auto;   /* Enable horizontal scroll */
     white-space: nowrap;    /* Keep links in a single row */
     scrollbar-width: none;
+    scrollbar-base-color: black;
     left: 0;
     right: 0;
 
 }
 #subnav a{
-    
+    position: relative;
     background-color: rgb(65, 57, 57);
     color:rgb(253, 254, 255);
     padding: 8px;

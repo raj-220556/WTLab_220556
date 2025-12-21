@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/style.css">
-    
+    <link rel="stylesheet" href="task1.css">
 </head>
 <body>
 
-    <header >
+    <div id="nav" >
         <a href=/index.html style="margin: 0;padding: 0; margin-bottom: 0%; width: 50px; height: 50px;" ><img src="/images/logo.png" width="50px" height="50px" style="margin: 0px;padding: 0px;"></a>
 
         <h1 id="ss">SudoSchool</h1>
@@ -25,7 +25,7 @@
             <a href="/index.html">Contact us</a>
             <a id="logintag" href="/index.html">sign up</a>
        </div>      
-    </header>
+    </div>
     <div id="subnav">
         <a href="/Courses/html.html">HTML</a>
         <a href="/Courses/css.html">CSS</a>
@@ -56,29 +56,71 @@
     </div>
     
 
-    <h1> HTML Course</h1>
+    <div id="content">
+        <h1>Task 1: Course overview</h1>
+        <p style="text-align: center; margin: 30px;">Explore our course overview</p>
 
-    <h2> Images Styles</h2>
+        <div id="table">
+            <p>Details of our couses:</p>
+            <table>
+                <tr>
+                    <th>Course</th>
+                    <th>Duration</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td>HTML</td>
+                    <td>3 months</td>
+                    <td>100/-</td>
+                </tr>
+                <tr>
+                    <td>CSS</td>
+                    <td>2 months</td>
+                    <td>80/-</td>
+                </tr>
+                <tr>
+                    <td>JavaScript</td>
+                    <td>4 months</td>
+                    <td>120/-</td>
+                </tr>
+            </table>
+        </div>
 
-    <video id = "video" style="height: 500px; width: 500px;" controls muted>
-        <source src="/Tasks/Task1_html/resources/videoplayback.mp4">
-    </video>
-    <h2> Audio Styles</h2>
-    <audio controls muted>
-        <source src = "/Tasks/Task1_html/resources/iphone-remix-68028.mp3">
-    </audio>
-    </br>
-    <iframe src="https://www.wikipedia.org/" style="width: 100%;height: 300px;">
-    </br>
-    </iframe>
-    <iframe src="/Tasks/Task1_html/resources/WT Lab Task 1.pdf" style="width: 100%;height: 500px;" ></iframe>
+        <div id="v_a">
+            <div id="video">
+                <h2> Demo of video</h2>
+                <video id = "video" controls muted>
+                    <source src="/Tasks/Task1_html/resources/videoplayback.mp4">
+                </video>
+            </div>
+            <div id="audio">
+                <h2> Demo Audio</h2>
+                <audio controls muted>
+                    <source src = "/Tasks/Task1_html/resources/iphone-remix-68028.mp3">
+                </audio>
+            </div>
+        </div>
 
-    
-    <table>
+        
+        <div id="pdf">
+            <h2>Course content</h2>
+            <iframe class="frames" src="/Tasks/Task1_html/resources/WT Lab Task 1.pdf"></iframe>
+        </div>
+       
+        <h2 style="margin: auto; width: 80%; font-size: 2rem;">Websites of our Fellow Learners</h2>
+        <div id="websites">
+            
+            <iframe id="wiki" src="https://www.wikipedia.org/"></iframe>
+            <iframe id="shopi" src="https://bfcm.shopify.com/"></iframe>
+        </div>
+        
 
-    </table>
+    </div>
 
-    <iframe src="https://bfcm.shopify.com/" style="width: 100%;height: 300px;"></iframe>
+    <div id = "footer">
+        &copy; 2026 SudoSchool. All rights reserved. 
+    </div>
+
     
     
 </body>

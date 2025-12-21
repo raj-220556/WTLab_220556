@@ -1,0 +1,106 @@
+#content{
+    background-color: rgb(240, 240, 240);
+    margin: 0;
+    padding: 5px;
+    justify-content: center;
+}
+#content p{
+    color: rgb(88, 88, 88);
+    font-size: 1.3rem;
+    margin-top: 0px;
+    padding: 0px;
+}
+
+#content h1{
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 3rem;
+    margin: 20px;
+}
+#content h1:hover{
+    color: rgb(109, 177, 255);
+}
+
+#content #table{
+    margin:auto;
+    box-shadow: 2px 2px 20px black;
+    border-radius: 10px;
+
+    padding: 20PX;
+    font-size: 1.5rem;
+    
+    background-color: rgb(255, 255, 255);
+    width: 70%;
+    height: 300px;
+
+}
+
+table{
+    width: 100%;
+    text-align: left;
+    height: 200px;
+    border-collapse: collapse;
+}
+
+th{
+    border-bottom-style: inset;
+    background-color: rgb(240, 240, 240);
+}
+tr{
+    border-bottom: 1px solid rgb(180, 180, 180);
+}
+tr:hover{
+    background-color: rgb(245, 245, 240);
+}
+
+#content #v_a{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px;
+    gap: 30px;
+    margin: 40px;
+}
+
+#video, #audio{
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 20px black;
+}
+
+video,audio{
+    width: 90%;
+    border-radius: 10px;
+    height: 100px;
+}
+
+#pdf {
+    margin: auto;
+    width: 80%;
+    font-size: 2rem;
+
+}
+#pdf iframe{
+    border: 1px solid black;
+    border-radius: 20px;
+    height: 500px;
+    width: 100%;
+}
+
+#websites {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    margin: auto;
+    width: 90%;
+    
+}
+#websites iframe {
+    width: 100%;
+    height: 500px;
+    border: 1 px solid black;
+    border-radius: 20px;
+
+}
+
+
