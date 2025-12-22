@@ -17,17 +17,7 @@ body{
     bottom: 0;
 
 }
-#logintag{
-    padding-left: 18px;
-    padding-right: 18px;
 
-    color: white;
-    background-color: rgb(78, 160, 78);
-    border-radius: 10px;
-}
-#logintag:hover{
-    background-color: rgb(3, 102, 3);
-}
 #nav{
     background-color: rgb(255, 255, 255);
     align-items: center;
@@ -52,6 +42,17 @@ body{
 #nav a:hover{
     background-color: rgba(206, 196, 196, 0.568);
     border-radius: 20px;
+}
+#logintag{
+    padding-left: 18px;
+    padding-right: 18px;
+
+    color: white;
+    background-color: rgb(78, 160, 78);
+    border-radius: 10px;
+}
+#logintag:hover{
+    background-color: rgb(3, 102, 3);
 }
 
 
