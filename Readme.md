@@ -15,6 +15,11 @@
 ### Pages Required
 - Course pages
 - home
+Forms: 
+ - Student Registration Form
+ - Course enrollment form
+ - Project/assignment submission form
+ - Feedback/grievance forms
 
 
 ### inputs & outputs

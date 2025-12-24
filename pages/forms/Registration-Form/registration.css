@@ -1,0 +1,65 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(regback.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+
+    color: rgb(134, 146, 173);
+}
+
+#form-container{
+    margin: auto;
+    margin-top: 100px;
+    background-color: rgb(24, 22, 22);
+    width: 50%;
+    height: fit-content;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid rgb(80, 79, 79);
+}
+
+#form-body{
+    width: 100%;
+    height: fit-content;
+    padding: 30px;
+    margin: 30px;
+}
+
+#form-head{
+    color: rgb(77, 151, 219);
+    text-align: center;
+    font-size: 1.2em;
+}
+
+#form-step{
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+.step-lines{
+    width: 100px;
+    height: 30px;
+    margin: 10px;
+    padding: 0;
+    border-bottom: 2px solid rgb(51, 48, 48);
+}
+.circles{
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    background-color: rgb(51, 48, 48);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+.step-names{
+    font-size: 0.8em;
+    text-align: center;
+    margin: 5px;
+}
+
+        

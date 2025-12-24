@@ -39,11 +39,14 @@ body{
     text-decoration: none;
     
 }
+#nav-pages{
+    margin-left: auto;
+}
 #nav a:hover{
     background-color: rgba(206, 196, 196, 0.568);
     border-radius: 20px;
 }
-#logintag{
+#nav #logintag{
     padding-left: 18px;
     padding-right: 18px;
 
@@ -51,7 +54,7 @@ body{
     background-color: rgb(78, 160, 78);
     border-radius: 10px;
 }
-#logintag:hover{
+#nav #logintag:hover{
     background-color: rgb(3, 102, 3);
 }
 

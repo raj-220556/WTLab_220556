@@ -32,11 +32,13 @@
 
 
 .form-div{
-    width: 90%;
+    /* width: 90%; */
     height: 500px;
 
     padding: 30px;
     margin-block: 30px;
+    display: flex;
+    
 }
 
 .from-option{
@@ -46,7 +48,7 @@
     font-size: 1.5rem;
     margin: 10px;
     padding: 5px;
-    width: 200px;
+    /* width: 200px; */
     border-radius: 5px;
 }
 
@@ -54,9 +56,6 @@
     background-color: rgb(165, 216, 236);
 }
 
-#extra-width{
-    width: 350px;
-}
 
 .form-div button{
     background-color: rgb(33, 33, 252);
