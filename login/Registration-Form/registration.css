@@ -1,0 +1,320 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(regback.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+
+    color: rgb(134, 146, 173);
+}
+
+#form-container{
+    margin: auto;
+    margin-top: 100px;
+    background-color: rgb(24, 22, 22);
+    width: 50%;
+    height: fit-content;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid rgb(80, 79, 79);
+}
+
+#form-body{
+    width: 100%;
+    height: fit-content;
+    padding: 30px;
+    margin: 30px;
+}
+
+#form-head{
+    color: rgb(77, 151, 219);
+    text-align: center;
+    font-size: 1.2em;
+}
+
+#form-step{
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+.step-lines{
+    width: 100px;
+    height: 30px;
+    margin: 10px;
+    padding: 0;
+    border-bottom: 2px solid rgb(51, 48, 48);
+}
+.circles{
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    background-color: rgb(51, 48, 48);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+.step-names{
+    font-size: 0.8em;
+    text-align: center;
+    margin: 5px;
+}
+
+
+#form-body{
+    padding: 0;
+    margin: 0;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 30px;
+   
+}
+
+
+
+.flex-fields{
+    display: flex;
+    gap: 20px;
+
+}
+/* Add this to make the two columns equal width */
+.flex-fields > div {
+    flex: 1; 
+}
+
+.fields{
+    display: flex;
+    background-color: rgb(49, 45, 45);
+    height: 40px;
+    border: 1px solid lightslategray;
+    border-radius: 10px;
+    padding: 2px;
+
+    
+}
+.fields input, .fields select, .fields textarea{
+    background-color: transparent;
+    width: 100%;
+    border: none;
+    margin: 0;
+    color: white;
+}
+.fields select{
+    color: rgb(134, 146, 173);
+}
+.fields input:focus, .fields select:focus, .fields textarea:focus{
+    outline: none;
+}
+#icons{
+    height: 40px;
+    width: 40px;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.area-fields{
+    width: 100%;
+    height: 150px;
+    background-color: rgb(49, 45, 45);
+    margin: 10px;
+    border-radius: 10px;
+    border: 2px dashed lightslategray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+.area-fields input{
+    background-color: transparent;
+}
+
+.area-fields:hover{
+    border-color: rgb(86, 113, 187);
+    color: rgb(86, 113, 187);
+}
+.area-fields:hover input, .area-fields:hover p{
+    color: rgb(134, 146, 173);
+}
+
+.contbtn{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 45px;
+    justify-content: center;
+    margin: 10px;
+    margin-top: 30px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(to right,rgb(109, 77, 255),rgb(211, 106, 124));
+}
+.radios{
+    background-color: rgb(49, 45, 45);
+    border: 1px solid rgb(70, 64, 64);
+    border-radius: 10px;
+    display: flex;
+    font-size: 0.8em;
+    padding: 10px;
+    margin: 10px;
+    height: 40px;
+    
+}
+.radios p,h3{
+    margin: 2px;
+    margin-left: 10px;
+    padding: 0px;
+}
+.radios h3{
+    color: white;
+}
+.radios input{
+    width: 18px;
+    height: 18px;
+    margin: 10px;
+    appearance: none;
+    border: 2px solid lightslategray;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+}
+.radios input[type="radio"]:checked{
+    border: 2px solid rgb(70, 88, 255);
+}
+
+.radios:hover{
+    border: 1px solid rgb(172, 226, 230);
+}
+.radios:hover h3{
+    color: rgb(172, 226, 230);
+}
+
+.notifi{
+    background-color: rgb(49, 45, 45);
+    height: 230px;
+    padding: 15px;
+    border-radius: 10px;
+
+}
+
+.notifi-div{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 5px;
+}
+.notifi h4{
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+.notifi-div:hover h4{
+    color: rgb(120, 153, 241);
+}
+.notifi-p p{
+    padding: 0;
+    margin: 1px;
+    font-size: 0.8em;
+}
+
+.notifi button{
+    margin: 10px;
+    margin-left: auto;
+    height: 25px;
+    width: 50px;
+    border-radius: 20px;
+    border: none;
+
+}
+
+.term-container{
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    margin: 0;
+    background-color: rgb(36, 34, 34);
+    border-radius: 10px;
+}
+
+.term{
+    display: flex;
+    gap: 10px;
+    margin: 20px;
+    margin-left: 0;
+}
+.term input{
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.term-div{
+    margin: 0;
+}
+.term-div:hover h4{
+    color: rgb(77, 151, 219);
+}
+.term-div p{
+    margin: 0;
+    font-size: 0.8em;
+}
+.term-div h4{
+    margin: 0;
+    color: white;
+}
+
+.note{
+    width: 100%;
+    height: 50px;
+    margin-top: 30px;
+    padding: 10px;
+    background-color: rgba(4, 92, 92, 0.384);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid rgb(4, 92, 92);
+
+    
+}
+.contbtn:hover{
+    background: linear-gradient(to right,rgb(81, 44, 248),rgb(252, 83, 111));
+}
+
+.prevbtn{
+    display: flex;
+    align-items: center;
+    gap:10px;
+    width: 100%;
+    height: 45px;
+    justify-content: center;
+    margin: 10px;
+    margin-top: 30px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    background-color: black;
+}
+.prevbtn:hover{
+    background-color: rgb(241, 88, 114);
+}
+.enabled{
+    display: block;
+}
+
+.disabled{
+    display: none;
+}

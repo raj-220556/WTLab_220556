@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="registration.css">
+    <script src="https://kit.fontawesome.com/677403275e.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    
+
+    <div id="form-container">
+        <div id="form-head">
+            <h1>logo</h1>
+            <h1 style="margin: 0;">Create Account</h1>
+            <p style="margin: 5px; font-size: 0.9em;">Join us and start your journey today </p>
+
+        </div>
+        <div id="form-step">
+            <div id="form-step-1" class="form-num">
+                <p id="circle-1" class="circles">1</p>
+                <p id="form-step-name1" class="step-names">Personal</p>
+            </div>
+            <div id="line-1" class="step-lines"></div>
+
+            <div id="form-step-2" class="form-num">
+                <p id="circle-2" class="circles">2</p>
+                <p id="form-step-name2" class="step-names">Contact</p>
+            </div>
+            <div id="line-2" class="step-lines"></div>
+
+            <div id="form-step-3" class="form-num">
+                <p id="circle-3" class="circles">3</p>
+                <p id="form-step-name3" class="step-names">Preference</p>
+            </div>
+            <div id="line-3" class="step-lines"></div>
+
+            <div id="form-step-4" class="form-num">
+                <p id="circle-4" class="circles">4</p>
+                <p id="form-step-name1" class="step-names">Review</p>
+            </div>
+
+
+        </div>
+        <!-- Form Body -->
+        <div id="form-body">
+            <form action="registration.php" method="POST" enctype="multipart/form-data" >
+                <div id="form-1" class="disabled">
+                    <div class="flex-fields">
+                        <div>
+                            <p>First Name</p>
+                            <div class="fields">
+                                <i class="fa-regular fa-user" id="icons"></i>
+                                <input id="fname" type="text" placeholder="John" name="fname">
+                            </div>
+                            
+                        </div>
+                        <div>
+                            <p>Last Name</p>
+                            <div class="fields">
+                                <i class="fa-regular fa-user" id="icons"></i>
+                                <input id="lname" type="text" placeholder="Doe" name="lname">
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p>Email Address</p>
+                        <div class="fields"> 
+                            <i class="fa-regular fa-envelope" id="icons"></i>
+                            <input id="email" type="text" placeholder="john@gmai.com" name="email">
+                        </div>
+                    </div>
+                    <div class="flex-fields">
+                        <div>
+                            <p>Password</p>
+                            <div class="fields">
+                                <i class="fa-solid fa-lock" id="icons"></i>
+                                <input id="passwd" type="password" placeholder="......." name="password">
+                            </div>
+                        </div>
+                        <div>
+                            <p>Confirm Password</p>
+                            <div class="fields">
+                                <i class="fa-solid fa-lock" id="icons"></i>
+                                <input id="cpasswd" type="password" placeholder="......." name="cpassword">
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p>Profile Picture</p>
+                        <div class="area-fields">
+                            <i class="fa-solid fa-cloud-arrow-up" id="icons"></i>
+                            <input type="file" name="profilepic">
+                            <p style="font-size: 0.45em;">PNG,JPG,GIF up to 10MB</p>
+                        </div>
+                    </div>
+                    <button class="contbtn" type="button" onclick="incrementSteppage(1)"> Continue<i class="fa-solid fa-arrow-right" id="icons"></i></button>
+                </div>
+
+                <div id="form-2" class="disabled">
+                    <div>
+                        <p>Phone Number</p>
+                        <div class="fields">
+                            <i class="fa-solid fa-phone" id="icons"></i>
+                            <input id="phnum" type="text" placeholder="+91 91234 56789" name="phnum">
+                        </div>
+                    </div>
+                    <div>
+                        <p>Date of Birth</p>
+                        <div class="fields">
+                            <i class="fa-solid fa-calendar" id="icons"></i>
+                            <input id="dob" type="date" name="dob" style="color: rgb(134, 146, 173);">
+                        </div>
+                    </div>
+                    <div>
+                        <p>Continue</p>
+                        <div class="fields">
+                            <i class="fa-solid fa-location-dot" id="icons"></i>
+                            <select placeholder="country" name="country">
+                                <option value="US">United States</option>
+                                <option value="UK">United Kingdom</option>
+                                <option value="india">India</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <p>Address</p>
+                        <div class="fields" style="height: 100px; padding: 10px;">
+                            <textarea name="address" id="" rows="3" placeholder="Enter your full address...." ></textarea>
+                        </div>
+                    </div>
+                    <div>
+                        <p>Company (optional)</p>
+                        <div class="fields">
+                            <i class="fa-solid fa-suitcase" id="icons"></i>
+                            <input type="text" placeholder="Google" name="company">
+                        </div>
+                    </div>
+                    <div style="display: flex;">
+                        <button type="button" onclick="decrementSteppage(2)" class="prevbtn"> <i class="fa-solid fa-arrow-left"></i>Previous</button>
+                        <button type="button" onclick="incrementSteppage(2)" class="contbtn"> Continue <i class="fa-solid fa-arrow-right" id="icons"></i></button>
+                    </div>
+
+                </div>
+                <div id="form-3" class="enabled">
+                    <div>
+                        <p>What's your role?</p>
+                        <div class="radios">
+                            <input id="rdev" type="radio" name="role" value="Developer">
+                            <div>
+                                <h3>Developer</h3>
+                                <p>Build and maintainapplicatins</p>
+                            </div>
+                                
+                        </div>
+                        <div class="radios">
+                            <input id="rdes" type="radio" name="role" value="Designer">
+                            <div>
+                                <h3>Designer</h3>
+                                <p>Create Beautiful Interfaces</p>
+                            </div>
+                            
+                        </div>
+                        <div class="radios">
+                            <input id="rman" type="radio" name="role" value="Manager">
+                            <div>
+                                <h3>Manager</h3>
+                                <p>Lead and cordinate teams</p>
+                            </div>
+                                
+                        </div>
+                        <div class="radios">
+                            <input id="roth" type="radio" name="other">
+                            <div>
+                                <h3>Other</h3>
+                                <p>Something else entirely</p>
+                            </div>
+                                
+                        </div>
+                        <div>
+                            <p>Experience Level</p>
+                            <div class="fields" style="background-color: transparent; border: none;">
+                                <input type="range" name="experience" step="1" width="100%">
+                            </div>
+                        </div>
+                        <div class="notifi">
+                            <p>Notifications</p>
+                            <div >
+                                <div class="notifi-div">
+                                    <div class="notifi-p">
+                                        <h4>Email Notifications</h4>
+                                        <p>Recive updates via email</p>
+                                    </div>
+                                    
+                                    <button type="button"></button>
+                                </div>
+                                <div class="notifi-div">
+                                    <div class="notifi-p">
+                                        <h4>SMS Notifications</h4>
+                                        <p>get text message alerts</p>
+                                    </div>
+                                    
+                                    <button type="button"></button>
+                                </div>
+                                <div class="notifi-div">
+                                    <div class="notifi-p">
+                                        <h4>Push Notifications</h4>
+                                        <p>Browser push notifications</p>
+                                    </div>
+                                    
+                                    <button type="button"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="display: flex;">
+                        <button type="button" onclick="decrementSteppage(3)" class="prevbtn"> <i class="fa-solid fa-arrow-left"></i> Previous</button>
+                        <button type="button" onclick="incrementSteppage(3)" class="contbtn"> Continue <i class="fa-solid fa-arrow-right" id="icons"></i> </button>
+                    </div>
+                </div>
+                <div id="form-4" class="disabled">
+                    <div class="term-container">
+                        <h3 style="color: white;">Terms & Agreements</h3>
+                        <div class="term">
+                            <input type="checkbox" name="cond1" value="true">
+                            <div class="term-div">
+                                <h4> I agree to the Terms of Service</h4>
+                                <p>By checking this, you agree to our terms and conditions</p>
+                            </div>
+                        </div>
+                        <div class="term">
+                            <input type="checkbox" name="cond2" value="true">
+                            <div class="term-div">
+                                <h4>I agree to the Privacy Policy</h4>
+                                <p>Your data will be handled according to our privacy policy</p>
+                            </div>
+                        </div>
+                        <div class="term">
+                            <input type="checkbox" name="cond3" value="true" >
+                            <div class="term-div">
+                                <h4>Subscribe to newsletter</h4>
+                                <p>Get the latest updates and offers</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="note">
+                        <p>By creating an account, you confirm that you have read and understood all the terms and conditions.</p>
+                    </div>
+                    <div style="display: flex;">
+                        <button type="button" onclick="decrementSteppage(4)" class="prevbtn"> <i class="fa-solid fa-arrow-left"></i> Previous</button>
+                        <button class="contbtn"> Create Account </button>
+                    </div>
+
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
