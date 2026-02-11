@@ -1,4 +1,9 @@
 <?php
+    // DataBase Connection
+    include("../../database.php");
+?>
+
+<?php
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
         if(empty($_POST['username'])){
             echo "Enter Username";

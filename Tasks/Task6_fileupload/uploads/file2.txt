@@ -1,0 +1,134 @@
+---- Importing Libraries -----
+import <library name> as <usecase name>
+
+---- Reading a dataset ----
+By using pandas module
+
+import pandas as pd
+
+df = pd.read_csv('dataset.csv')
+
+--- Meta Data Of Dataset ---
+
+print(df)  # It Prints total data in the dataset
+print(df.head())  # It display first 5 rows
+print(df.info()) # It Prints MetaData of dataset
+print(df.columns) # It returns Object
+print(df.shape) # Shows (rows, clumns) of dataset
+
+print(df.dtypes) # Returns all column names and their types
+
+print(df.isnull().sum()) # Returns all columns and their no.of NULL values
+
+--- Statistics ----
+
+df['column_name'].mean() 	# Return Mean of a particular Column
+df['column_name'].median()  # Return Median of a particular Column
+df['column_name'].std()     # Return Standard Deviation(Distance btw mean ) of a Column 
+df['column_name'].agg(['min', 'max']) 
+df['column_name'].agg('max')
+df['column_name'].describe()       # Return all min,max,std,mean,count,etc.
+
+--- Visualization ---
+
+matplotlib.pyplot 
+When you use plt, you are usually working with two main components:
+ - The Figure: The overall window or page where everything is drawn.
+ - The Axes: The area where the data actually appears (the plot with the $x$ and $y$ lines).
+
+simple example Learned To Understand:
+---- Simple graph Ploting ----
+	import matplotlib.pyplot as plt	
+	
+	# 1. Define Data
+	x = [1, 2, 3, 4]
+	y = [10, 20, 25, 30]
+	
+	# 2. Create the plot type
+	plt.plot(x, y, color='green', marker='o')
+	
+	# 3. Customize (Labels and Title)
+	plt.title("Sales Over Time")
+	plt.xlabel("Months")
+	plt.ylabel("Revenue")
+	
+	# Display Result
+	pltshow()
+
+---- Histogram -----
+a Histogram takes a single numerical column and groups the data into "bins" (ranges) to show you where most of your values fall.
+
+- bins : Is used to group the values ranges
+import matplotlib.pyplot as plt
+
+# Using the 'age' column from your dataset
+plt.hist(df['age'])
+plt.title("Distribution of Age")
+plt.xlabel("Age")
+plt.ylabel("Frequency")
+plt.show()
+
+-----------
+
+---  Count Plot – Purchase Frequency  ------ 
+Syntax used :
+sns.countplot(x='purchase_frequency', data=df)
+
+Here,
+x='purchase_frequency'  # Categories shown on x-axis.
+data=df 			 	# Dataset used.
+
+--- Box Plot – Purchase Amount Spread  ---------
+
+Syntax used:
+sns.boxplot(x=data['purchase_amount'])
+
+Here,
+x=data['purchase_amount']	# Data column plotted.
+
+
+--- Scatter Plot – Age vs Purchase Amount --------
+
+Syntax used:
+sns.scatterplot(x='age', y='purchase_amount', data=data)
+
+Here,
+x='age' 			# x-axis variable
+y='purchase_amount' # y-axis variable
+data=df  			# dataset
+
+
+
+5. Heatmap – Correlation Between Variables
+
+Syntax used
+
+sns.heatmap(data.corr(), annot=True, cmap='coolwarm')
+
+
+
+data.corr()
+
+→ Computes correlation matrix.annot=True
+
+→ Shows correlation numbers on the map.
+
+cmap='coolwarm'
+
+→ Color theme of heatmap.
+
+
+
+Correlation values:
+
++1 → strong positive relation
+
+0 → no relation
+
+-1 → strong negative relation
+
+
+seaborn module
+Use Seaborn (sns) for: Complex statistical visualizations, heatmaps, and making your charts "presentation-ready" quickly.
+
+--- Count Plot

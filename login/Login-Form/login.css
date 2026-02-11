@@ -1,0 +1,116 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background: linear-gradient(135deg, rgb(78, 0, 78),rgb(0, 71, 99), rgb(151, 8, 32), rgb(2, 2, 179));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#container{
+    /* background: linear-gradient(135deg, rgba(0, 71, 99, 0.205), rgba(151, 8, 32, 0.199)); */
+    width: 300px;
+    height: 500px;
+    color: white;
+    background-color: rgb(23, 30, 34);
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 50px;
+    margin: 0;
+
+    border-radius: 20px;
+    border: 1px solid rgb(172, 167, 167);
+    box-shadow: 0px 0px 20px black;
+}
+
+#logo{
+    width: 50px;
+    height: 50px;
+
+    margin: 10px;
+    padding: 0;
+
+    border-radius: 2px;
+    border: 1px solid white;
+
+
+
+}
+
+#heading{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    margin: 20px;
+    padding: 0;
+}
+
+#heading p{
+    /* font-size: 0.9rem; */
+    padding: 0;
+    margin: 10px;
+    color: rgb(126, 130, 133);
+    text-align: center;
+}
+
+
+.infield input{
+    box-sizing: border-box; /* prevents overlaping width */
+    width: 100%;
+    height: 40px;
+    color: rgb(226, 226, 226);
+    background-color: rgb(42, 55, 63);
+
+    margin-block: 10px;
+    padding-left: 10px;
+    
+    font-size: 16px;
+
+    border: none;
+    border-radius: 10px;
+    
+}
+
+.infield input:focus{
+    outline: none;
+}
+
+.forgotfield{
+    display: flex;
+    color: rgb(126, 130, 133);
+}
+.forgotfield div{
+    display: flex;
+    margin-right: auto;
+}
+.forgotfield div p{
+    margin-left: 10px;
+}
+
+#signbtn{
+    width: 100%;
+    height: 50px;
+    margin-block: 20px;
+    border-radius: 10px;
+    color: white;
+    background: linear-gradient(35deg, rgb(84, 84, 235), rgb(255, 93, 120));
+    font-size: 18px;
+    border: none;
+}
+
+#foot{
+    display: flex;
+}
