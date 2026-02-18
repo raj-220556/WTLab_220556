@@ -2,9 +2,9 @@
     $filename = 'uploads/test.txt';
     $f = fopen($filename, 'a+');
 
-    // r
-    // w
-    // a
+    // r - read only
+    // w - write only : Erase old data
+    // a - 
     // x
     // r+
     // w+
