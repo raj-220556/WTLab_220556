@@ -1,3 +1,4 @@
 .env
 vendor/
-service-account.json
+
+/OAuth2.0/firebase/with/service-account.json

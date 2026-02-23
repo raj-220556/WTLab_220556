@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SudoSchool - Firebase Direct</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .card { background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); width: 100%; max-width: 400px; }
+        h2 { color: #333; margin-bottom: 1.5rem; text-align: center; }
+        input { width: 100%; padding: 12px; margin-bottom: 1rem; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; font-size: 1rem; }
+        button { width: 100%; padding: 12px; background-color: #f58220; color: white; border: none; border-radius: 6px; font-size: 1rem; font-weight: bold; cursor: pointer; transition: background 0.3s; }
+        button:hover { background-color: #e67616; }
+        #status { margin-top: 1rem; text-align: center; font-size: 0.9rem; min-height: 1.2rem; }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>Add Student</h2>
+    <input type="text" id="userName" placeholder="Full Name">
+    <input type="email" id="userEmail" placeholder="Email Address">
+    <button id="submitBtn">Save to Firestore</button>
+    <div id="status"></div>
+</div>
+
+<script type="module">
+    // Using the stable Modular SDK (v10.8.0)
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+    // Your confirmed configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyD7OBhCwCLudms_gJsU0yK--89UHoG8xEo",
+        authDomain: "sudoschool-46dbb.firebaseapp.com",
+        projectId: "sudoschool-46dbb",
+        storageBucket: "sudoschool-46dbb.firebasestorage.app",
+        messagingSenderId: "262709150825",
+        appId: "1:262709150825:web:339f742c8217812cc2cef8"
+    };
+
+    // Initialize
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    const btn = document.getElementById('submitBtn');
+    const statusDiv = document.getElementById('status');
+
+    btn.addEventListener('click', async () => {
+        const name = document.getElementById('userName').value;
+        const email = document.getElementById('userEmail').value;
+
+        if(!name || !email) {
+            updateStatus("Please fill all fields", "red");
+            return;
+        }
+
+        updateStatus("Processing...", "orange");
+
+        try {
+            // Updated to 'users' collection to match your screenshot
+            const docRef = await addDoc(collection(db, "users"), {
+                name: name,
+                email: email,
+                created_at: serverTimestamp()
+            });
+
+            updateStatus(`✅ Success! ID: ${docRef.id}`, "green");
+            
+            // Reset form
+            document.getElementById('userName').value = "";
+            document.getElementById('userEmail').value = "";
+
+        } catch (error) {
+            console.error("Firestore Error:", error);
+            updateStatus("❌ Error: " + error.message, "red");
+        }
+    });
+
+    function updateStatus(msg, color) {
+        statusDiv.innerText = msg;
+        statusDiv.style.color = color;
+    }
+</script>
+
+</body>
+</html>
