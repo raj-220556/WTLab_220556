@@ -2,7 +2,7 @@
 require_once 'fb-config.php';
 
 // Permissions we want to request from the user
-$permissions = ['email']; 
+$permissions = ['public_profile'];
 
 // Generate the login URL
 $loginUrl = $helper->getLoginUrl($_ENV['FB_REDIRECT_URL'], $permissions);
