@@ -6,8 +6,14 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- header -->
+    <?php include "./include/header.php" ?>
+
     <a href="variable_scope.php" target="_blank">variable_scope</a><br>
     <a href="string_function.php" target="_blank">String functions</a>
     &lt;hi&gt;
+
+
+    <?php include "./include/footer.php" ?>
 </body>
 </html>

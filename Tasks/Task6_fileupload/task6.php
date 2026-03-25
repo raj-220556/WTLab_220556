@@ -6,12 +6,17 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- header -->
+    <?php include "./include/header.php" ?>
+
     <form action="task6.php" method="POST" enctype='multipart/form-data'>
         FileName:<br>
         <input type="text" name="filename"><br>
         <input type="file" name="file"><br>
         <input type="submit" placeholder="Submit"><br>
     </form>
+
+    <?php include "./include/footer.php" ?>
 </body>
 </html>
 

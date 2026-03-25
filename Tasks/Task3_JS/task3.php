@@ -6,7 +6,13 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- header -->
+    <?php include "./include/header.php" ?>
+
     <div id="box" >box</div>
     <script src="task3.js"></script>
+
+
+    <?php include "./include/footer.php" ?>
 </body>
 </html>

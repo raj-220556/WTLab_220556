@@ -39,7 +39,7 @@ try {
     $_SESSION['user_name']    = $userInfo->name;
     $_SESSION['user_picture'] = $userInfo->picture;
 
-    header('Location: dashboard.php');
+    header('Location: ../../index.php');
     exit(); 
 
 } catch (Exception $e) {

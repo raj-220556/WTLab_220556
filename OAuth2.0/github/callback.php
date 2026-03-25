@@ -29,8 +29,26 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, [
 ]);
 $user_data = json_decode(curl_exec($ch), true);
 
-// 3. Display data or save to Database
-echo "<h1>Welcome, " . $user_data['login'] . "</h1>";
-echo "<img src='" . $user_data['avatar_url'] . "' width='100'>";
-echo "<pre>"; print_r($user_data); echo "</pre>";
+// // 3. Display data or save to Database
+// echo "<h1>Welcome, " . $user_data['login'] . "</h1>";
+// echo "<img src='" . $user_data['avatar_url'] . "' width='100'>";
+// echo "<pre>"; print_r($user_data); echo "</pre>";
+
+
+
+if (isset($user_data['login'])) {
+    // 3. Store relevant data in the Session
+    $_SESSION['user'] = [
+        'username' => $user_data['login'],
+        'avatar'   => $user_data['avatar_url'],
+        'name'     => $user_data['name'] ?? $user_data['login'],
+        'logged_in' => true
+    ];
+
+    // 4. Redirect to the dashboard
+    header('Location: ../../index.php');
+    exit();
+} else {
+    die("Error: Could not retrieve user data.");
+}
 ?>
